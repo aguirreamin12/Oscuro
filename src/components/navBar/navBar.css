@@ -52,3 +52,12 @@
 .header .nav-links li a:hover{
     color: #bcbcbc;
 }
+
+.header .cart {
+    cursor: pointer;
+}
+
+.header .cart img {
+    height: 67.5px;
+    width: auto;
+}
