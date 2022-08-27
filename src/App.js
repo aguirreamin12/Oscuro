@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
 
 // IMAGENES
@@ -26,6 +26,7 @@ class App extends React.Component{
 						name='Remera Blanca Tracklist'
 						precio='$2700'
 						img={Remera1}
+						stock='5'
 					/>
           
 					<CardComponent
