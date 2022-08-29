@@ -4,7 +4,6 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
-import ItemCount from '../ItemCount/ItemCount';
 
 const CardComponent = ({ name, precio, img }) => {
 	return (
@@ -18,7 +17,6 @@ const CardComponent = ({ name, precio, img }) => {
 					<Typography variant='body2' color='text.secondary'>
 						Precio: {precio}
 					</Typography>
-					<ItemCount/>
 				</CardContent>
 			</CardActionArea>
 		</Card>

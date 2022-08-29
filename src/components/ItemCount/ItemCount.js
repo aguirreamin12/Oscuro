@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import "./ItemCount.css";
 
-const ItemCount = () => {
-    const [counter, setCounter] = useState(1);
-    const [stock] = useState(5);
+const ItemCount = ({stock, initial, onAdd}) => {
+    const [counter, setCounter] = useState(initial)
 
     const CounterUp = () => {
         if (counter < stock){
@@ -15,7 +14,10 @@ const ItemCount = () => {
         if(counter > 1){
             setCounter(counter - 1)
         }
-        
+    }
+
+    const AgregarCantidad = () => {
+        onAdd(counter)
     }
 
     return (
@@ -26,7 +28,7 @@ const ItemCount = () => {
         <p>{counter}</p>
         <button className='sumar' onClick={CounterUp}>+</button>
         </div>
-        <button className='carrito'>Agregar al carrito</button>
+        <button className='carrito' onClick={AgregarCantidad}>Agregar al carrito</button>
     </div>
     );
 };
