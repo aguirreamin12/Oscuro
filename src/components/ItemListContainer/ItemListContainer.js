@@ -1,19 +1,31 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { getFetch } from '../../Mock'
 import "./ItemListContainer.css";
-import ItemCount from '../ItemCount/ItemCount.js';
+import ItemList from '../ItemList/ItemList';
+import Progress from '../Progress/Progress';
 
-const ItemListContainer = ({title}) => {
+const ItemListContainer = () => {
 
-    const onAdd = (cantidad) =>{
-        console.log(`Se agregaron ${cantidad} unidades`)
-    }
+    const [Productos, setProductos] = useState([])
+    const [loading, setLoading] = useState(true)
+
+    useEffect(() => {
+        getFetch
+        .then((respuesta) => setProductos(respuesta))
+        .catch(err => console.log(err))
+        .finally(() => setLoading(false))
+    }, [])
 
     return (
-        <div className='greeting'>
-			<h1>{title}</h1>
-
-            <ItemCount stock={5} initial={1} onAdd={onAdd}/>
-		</div>
+    <div>
+        {
+            loading
+            ?
+            <Progress/>
+            :
+            <ItemList Productos = {Productos}/>
+        }
+    </div>
     );
 };
 
