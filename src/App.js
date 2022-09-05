@@ -4,7 +4,7 @@ import './App.css';
 
 // COMPONENTS
 import NavBar from './components/navBar/navBar';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
 
 
 class App extends React.Component{
@@ -13,7 +13,7 @@ class App extends React.Component{
 		return (
 			<div>
 				<NavBar/>
-				<ItemListContainer/>
+				<ItemDetailContainer/>
 			</div>
 		);
 	}

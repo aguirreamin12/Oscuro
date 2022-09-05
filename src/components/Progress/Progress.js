@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 
 const Progress = () => {
   return (
-    <Box sx={{ display: 'flex', marginTop: '20px', marginLeft: '50%' }}>
+    <Box sx={{ display: 'flex', marginTop: '20%', marginLeft: '50%' }}>
       <CircularProgress />
     </Box>
   );
