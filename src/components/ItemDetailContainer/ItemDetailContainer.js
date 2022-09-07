@@ -3,14 +3,14 @@ import { getFetch } from '../../Mock'
 import ItemDetail from '../ItemDetail/ItemDetail';
 import Progress from '../Progress/Progress';
 
-const ItemListContainer = () => {
+const ItemDetailContainer = () => {
 
     const [Productos, setProductos] = useState([])
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
         getFetch
-        .then((respuesta) => setProductos(respuesta))
+        .then((respuesta) => setProductos(respuesta.find(prod => prod.id === 1)))
         .catch(err => console.log(err))
         .finally(() => setLoading(false))
     }, [])
@@ -28,4 +28,4 @@ const ItemListContainer = () => {
     );
 };
 
-export default ItemListContainer;
+export default ItemDetailContainer;

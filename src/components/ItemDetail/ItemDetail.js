@@ -2,20 +2,21 @@ import React from 'react'
 import "./ItemDetail.css";
 import ItemCount from '../ItemCount/ItemCount';
 
-const ItemDetail = () => {
+const ItemDetail = ({Productos}) => {
 	return (
 		<div className='ItemDetail'>
-            <img className='Producto' src='https://media1.sistemacontinuo.com.ar/5289/remera-hombre-sublimable.jpg' alt='Remera Blanca'></img>
-
-            <h1 className='nombreProducto'>Remera Blanca</h1>
+        
+            
+            <img src={Productos.img} alt={Productos.nombre}/>
             <p className='details'>
+                <h1 className='nombreProducto'>{Productos.nombre}</h1>
                 <ul>
-                    <li>Material: algodón con un 80% de poliester</li>
-                    <li>Cuello redondo</li>
-                    <li>Excelente confección con unas costuras resistentes</li>
-                    <li>Color: blanco</li>
+                    <li>Material: {Productos.material}</li>
+                    <li>Cuello: {Productos.cuello}</li>
+                    <li>Color: {Productos.color}</li>
+                    
                 </ul>
-                <h2 className='precio'>Precio: $2700</h2>
+                <h2 className='precio'>Precio: ${Productos.precio}</h2>
                 <div className='counter'>
                 <ItemCount stock={5} initial={1}/>
                 </div>

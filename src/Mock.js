@@ -7,6 +7,9 @@ const productos = [
 
     {id: 1,
     nombre: 'Remera Oscuro',
+    material: 'Algodón con un 80% de poliester',
+    cuello: 'Redondo',
+    color: 'Negro',
     img: 'https://cuestablanca.vteximg.com.br/arquivos/ids/360121-1000-1500/remera-manga-corta-negro-6.jpg',
     precio: 2350
     },
