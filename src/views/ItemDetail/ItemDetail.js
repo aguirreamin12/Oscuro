@@ -1,11 +1,9 @@
 import React from 'react'
 import "./ItemDetail.css";
 
-const ItemDetail = ({Productos}) => {
+function ItemDetail({Productos}) {
 	return (
 		<div className='ItemDetail'>
-        
-            
             <img src={Productos.img} alt={Productos.nombre}/>
             <p className='details'>
                 <h1 className='nombreProducto'>{Productos.nombre}</h1>

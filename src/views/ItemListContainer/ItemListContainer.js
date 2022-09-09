@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { getFetch } from '../../Mock'
 import ItemList from '../../components/ItemList/ItemList';
 import Progress from '../../components/Progress/Progress';
-import { Link } from 'react-router-dom';
 import './ItemListContainer.css';
 
 const ItemListContainer = () => {
@@ -19,7 +18,7 @@ const ItemListContainer = () => {
 
     return (
     <div className='ItemList'>
-        <Link to='/item'>
+        
         {
             loading
             ?
@@ -27,7 +26,7 @@ const ItemListContainer = () => {
             :
             <ItemList Productos = {Productos}/>
         }
-        </Link>
+        
     </div>
 
     );
