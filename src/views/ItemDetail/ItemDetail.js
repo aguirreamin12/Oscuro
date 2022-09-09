@@ -1,7 +1,7 @@
 import React from 'react'
 import "./ItemDetail.css";
 
-function ItemDetail({Productos}) {
+function ItemDetail({ Productos }) {
 	return (
 		<div className='ItemDetail'>
             <img src={Productos.img} alt={Productos.nombre}/>
@@ -11,7 +11,7 @@ function ItemDetail({Productos}) {
                     <li>Material: {Productos.material}</li>
                     <li>Cuello: {Productos.cuello}</li>
                     <li>Color: {Productos.color}</li>
-                    
+
                 </ul>
                 <h2 className='precio'>Precio: ${Productos.precio}</h2>
                 <div className='counter'>
