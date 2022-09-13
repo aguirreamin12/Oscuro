@@ -21,7 +21,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
     }
 
     return (
-    <div className="ItemCount">
+    <div id="ItemCount">
         <h1>Stock actual: {stock} unidades</h1>
         <div className='cantidad'>
         <button className='restar' onClick={CounterDown}>-</button>

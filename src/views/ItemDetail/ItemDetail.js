@@ -1,8 +1,22 @@
 import React from 'react'
 import "./ItemDetail.css";
 import ItemCount from '../../components/ItemCount/ItemCount'
+import Swal from 'sweetalert2'
 
 function ItemDetail({ Productos }) {
+
+    const onAdd = () =>{
+Swal.fire({
+  position: 'center',
+  icon: 'success',
+  text: '¡Has agregado este producto a tu carrito!',
+  showConfirmButton: false,
+  timer: 10000,
+  footer: '<a href="/cart">Click aquí para finalizar tu compra</a>'
+})
+    }
+
+
 	return (
 		<div className='ItemDetail'>
             <img src={Productos.img} alt={Productos.nombre}/>
@@ -16,7 +30,7 @@ function ItemDetail({ Productos }) {
                 </ul>
                 <h2 className='precio'>Precio: ${Productos.precio}</h2>
                 <div className='counter'>
-                <ItemCount stock={5} initial={1}/>
+                <ItemCount stock={5} initial={1} onAdd={onAdd}/>
                 </div>
             </p>
         </div>

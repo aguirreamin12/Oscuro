@@ -1,9 +1,12 @@
-.ItemCount h1{
+
+
+
+#ItemCount h1{
     font-size: .7rem;
     color: #686868;
 }
 
-.ItemCount .cantidad {
+#ItemCount .cantidad {
     display: flex;
     justify-content: space-around;
     align-items: center;
