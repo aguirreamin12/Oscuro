@@ -11,7 +11,6 @@ Swal.fire({
   icon: 'success',
   text: '¡Has agregado este producto a tu carrito!',
   showConfirmButton: false,
-  timer: 10000,
   footer: '<a href="/cart">Click aquí para finalizar tu compra</a>'
 })
     }
