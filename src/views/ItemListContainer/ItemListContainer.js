@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { getFetch } from '../../Mock'
 import ItemList from '../../components/ItemList/ItemList';
 import Progress from '../../components/Progress/Progress';
-import './ItemListContainer.css';
 
 const ItemListContainer = () => {
 

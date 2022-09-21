@@ -61,3 +61,8 @@
     height: 67.5px;
     width: auto;
 }
+
+.cartNumber{
+    color: white;
+    text-decoration: none;
+}

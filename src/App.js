@@ -1,12 +1,18 @@
 // REACT ROUTER DOM
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import NavBar from './components/NavBar/navBar';
+import NavBar from './components/navBar/navBar'
 import ItemListContainer from './views/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './views/ItemDetailContainer/ItemDetailContainer';
+import Cart from './components/Cart/Cart';
+import { CartProvider } from './context/CartContext';
+
 
 function App() {
 	return (
+
+		<CartProvider>
+
 		<Router>
 			<div className='App'>
 				<NavBar />
@@ -14,10 +20,12 @@ function App() {
 					<Route path='/' element={<ItemListContainer/>}/>
 					<Route path='/category/:id' element={<ItemListContainer/>}/>
 					<Route path='/detail/:id' element={<ItemDetailContainer />} />
-					<Route path='/cart' element={<ItemDetailContainer />} />
+					<Route path='/cart' element={<Cart/>} />
 				</Routes>
 			</div>
 		</Router>
+
+		</CartProvider>
 	);
 };
 
