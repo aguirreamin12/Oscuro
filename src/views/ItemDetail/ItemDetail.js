@@ -8,7 +8,7 @@ function ItemDetail({ Productos }) {
     const {addItem} = useContext(CartContext)
 
     const onAdd = (cantidad) => {
-        addItem( {Cantidad: cantidad, itemCart: Productos})
+        addItem(Productos, cantidad)
     }
 
 
