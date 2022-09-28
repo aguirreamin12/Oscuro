@@ -1,19 +1,31 @@
 import React, { useEffect, useState } from 'react';
-import { getFetch } from '../../Mock'
 import ItemList from '../../components/ItemList/ItemList';
 import Progress from '../../components/Progress/Progress';
+
+// FIREBASE
+import { collection, query, getDocs, where } from 'firebase/firestore';
+import { db } from '../../firebase/firebaseConfig';
 
 const ItemListContainer = () => {
 
     const [Productos, setProductos] = useState([])
     const [loading, setLoading] = useState(true)
 
+    const getProductos = async () => {
+		const q = query(
+			collection(db, 'oscuro') 
+		);
+		const docs = [];
+		const querySnapshot = await getDocs(q);
+		querySnapshot.forEach((doc) => {
+			docs.push({ ...doc.data(), id: doc.id });
+		});
+		setProductos(docs);
+	};
+
     useEffect(() => {
-        getFetch
-        .then((respuesta) => setProductos(respuesta))
-        .catch(err => console.log(err))
-        .finally(() => setLoading(false))
-    }, [])
+		getProductos();
+	}, []);
 
     return (
     <div className='ItemList'>
