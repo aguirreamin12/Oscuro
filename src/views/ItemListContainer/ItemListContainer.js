@@ -21,6 +21,7 @@ const ItemListContainer = () => {
 			docs.push({ ...doc.data(), id: doc.id });
 		});
 		setProductos(docs);
+        setLoading(false)
 	};
 
     useEffect(() => {
@@ -30,7 +31,13 @@ const ItemListContainer = () => {
     return (
     <div className='ItemList'>
         
-        {Productos.map((productos) => {
+
+        {
+            loading
+            ?
+            <Progress/>
+            :
+        Productos.map((productos) => {
             return (
                 <div key={productos.id}>
                     <ItemList Productos = {Productos}/>
