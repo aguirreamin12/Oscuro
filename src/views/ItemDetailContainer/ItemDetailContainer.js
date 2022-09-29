@@ -39,7 +39,13 @@ function ItemDetailContainer() {
             ?
             <Progress/>
             :
-            <ItemDetail Productos = {Productos}/>
+            Productos.map((Productos) => {
+				return (
+					<div key={Productos.id}>
+						<ItemDetail Productos={Productos} />
+					</div>
+				);
+			})
         }
     </div>
     );
