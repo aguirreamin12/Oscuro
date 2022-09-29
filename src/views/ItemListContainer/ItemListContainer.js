@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import ItemList from '../../components/ItemList/ItemList';
 import Progress from '../../components/Progress/Progress';
+import '../ItemListContainer/ItemListContainer.css'
 
 // FIREBASE
 import { collection, query, getDocs, where } from 'firebase/firestore';
@@ -30,8 +31,6 @@ const ItemListContainer = () => {
 
     return (
     <div className='ItemList'>
-        
-
         {
             loading
             ?
@@ -45,7 +44,6 @@ const ItemListContainer = () => {
             )
             
         })}
-        
     </div>
 
     );

@@ -4,6 +4,9 @@ import Progress from '../../components/Progress/Progress';
 import { useParams } from 'react-router-dom';
 
 
+// FIREBASE
+import { collection, query, getDocs, where } from 'firebase/firestore';
+import { db } from '../../firebase/firebaseConfig';
 
 function ItemDetailContainer() {
 
@@ -12,9 +15,22 @@ function ItemDetailContainer() {
     const { id } = useParams();
 
 
+    const getProductos = async () => {
+		const q = query(
+			collection(db, 'oscuro') 
+		);
+		const docs = [];
+		const querySnapshot = await getDocs(q);
+		querySnapshot.forEach((doc) => {
+			docs.push({ ...doc.data(), id: doc.id });
+		});
+		setProductos(docs);
+        setLoading(false)
+	};
+
     useEffect(() => {
-        
-    }, [id])
+		getProductos();
+	}, [id]);
 
     return (
     <div>
