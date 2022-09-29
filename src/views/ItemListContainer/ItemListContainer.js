@@ -30,13 +30,14 @@ const ItemListContainer = () => {
     return (
     <div className='ItemList'>
         
-        {
-            loading
-            ?
-            <Progress/>
-            :
-            <ItemList Productos = {Productos}/>
-        }
+        {Productos.map((productos) => {
+            return (
+                <div key={productos.id}>
+                    <ItemList Productos = {Productos}/>
+                </div>
+            )
+            
+        })}
         
     </div>
 
