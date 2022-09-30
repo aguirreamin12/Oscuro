@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 
 
 // FIREBASE
-import { collection, query, getDocs, where } from 'firebase/firestore';
+import { collection, query, getDocs, documentId, where } from 'firebase/firestore';
 import { db } from '../../firebase/firebaseConfig';
 
 function ItemDetailContainer() {
@@ -17,7 +17,7 @@ function ItemDetailContainer() {
 
     const getProductos = async () => {
 		const q = query(
-			collection(db, 'oscuro') 
+			collection(db, 'oscuro'), where(documentId(), '==', id)
 		);
 		const docs = [];
 		const querySnapshot = await getDocs(q);

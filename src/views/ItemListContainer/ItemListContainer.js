@@ -4,7 +4,7 @@ import Progress from '../../components/Progress/Progress';
 import '../ItemListContainer/ItemListContainer.css'
 
 // FIREBASE
-import { collection, query, getDocs, where } from 'firebase/firestore';
+import { collection, query, getDocs } from 'firebase/firestore';
 import { db } from '../../firebase/firebaseConfig';
 
 const ItemListContainer = () => {
