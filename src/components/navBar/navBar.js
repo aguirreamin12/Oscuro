@@ -15,8 +15,8 @@ const NavBar = () => {
             <nav>
                 <ul className='nav-links'> 
                     <NavLink to='/'> <li>Inicio</li></NavLink>
-                    <NavLink to='/categories/remeras'><li>Remeras</li></NavLink>
-                    <NavLink to='/categories/buzos'><li>Buzos</li></NavLink>
+                    <NavLink to='/category/Remera'><li>Remeras</li></NavLink>
+                    <NavLink to='/category/Buzo'><li>Buzos</li></NavLink>
                 </ul>
             </nav>
             <NavLink to='/cart'>
