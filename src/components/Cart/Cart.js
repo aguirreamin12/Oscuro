@@ -4,7 +4,6 @@ import { CartContext } from "../../context/CartContext";
 import ItemCart from "../ItemCart/ItemCart";
 
 
-
 const Cart = () => {
 
     const { cart, getItemPrice } = useContext(CartContext);
@@ -26,7 +25,8 @@ const Cart = () => {
             }
             <p>
                 Total: {getItemPrice()}
-            </p>        
+            </p>
+            <Link to='/Shop'>Finalizar Compra</Link>        
         </>
     )
 }
