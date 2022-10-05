@@ -46,7 +46,7 @@ const Shop = () => {
 
 	return (
 		<div style={styles.containerShop}>
-			<h1>Shop</h1>
+			<h1>¡Ingresa tus datos para finalizar tu compra!</h1>
 			<form className='FormContainer' onSubmit={onSubmit}>
 				<TextField
 					placeholder='Nombre'
@@ -69,7 +69,7 @@ const Shop = () => {
 					value={values.city}
 					onChange={handleOnChange}
 				/>
-				<button className='btnASendAction'>Send</button>
+				<button className='btnASendAction'>Enviar</button>
 			</form>
 			{purchaseID && <MessageSuccess purchaseID={purchaseID} />}
 		</div>
