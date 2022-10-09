@@ -1,6 +1,22 @@
-.ItemList {
+.ItemList div {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	margin: 40px 20px 40px 20px;
-	gap: 40px;
+	grid-template-columns: 1fr 1fr 1fr;
+	margin: 5px;
+	width: 100%;
+}
+
+.ItemList img {
+	width: 360px;
+}
+
+.ItemList .btnDetalles button{
+	background: #e8e8e8;
+	border: unset;
+	border-radius: 8px;
+	position: relative;
+}
+
+.ItemList .btnDetalles button:hover {
+	background: #cccbcb;
+	transition: all 0.8s;
 }
