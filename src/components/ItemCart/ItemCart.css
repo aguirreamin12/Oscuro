@@ -1,3 +1,23 @@
+.itemCart {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    border: 1px solid black;
+}
+
 .itemCart img {
     width: 200px;
+}
+
+.itemCart div p{
+    margin-top: 40px;
+}
+
+.itemCart div button {
+    border: 1px solid ;
+    background-color: rgb(185, 52, 52);
+    border-radius: 3px;
+}
+
+.itemCart div button:hover {
+    background-color: brown;
 }

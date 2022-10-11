@@ -6,12 +6,12 @@ const CartWidget = () => {
     const {getItemQty} = useContext(CartContext)
 
     return(
-        <>
+        <div>
         <img src={cart} alt='carrito'></img>
         
         {getItemQty() <= 0 ? '' : <span className='cartNumber'>{getItemQty()}</span>}
         
-        </>
+        </div>
     );
 }
 

@@ -2,13 +2,19 @@ import React, { useContext } from 'react'
 import "./ItemDetail.css";
 import ItemCount from '../../components/ItemCount/ItemCount'
 import { CartContext } from '../../context/CartContext';
-import { Link } from 'react-router-dom';
+import Swal from 'sweetalert2'
 
 function ItemDetail({ Productos }) {
     const {addItem} = useContext(CartContext)
 
     const onAdd = (cantidad) => {
         addItem(Productos, cantidad)
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            text: '¡Has agregado este producto a tu carrito!',
+            showConfirmButton: false,
+        })
     }
 
 
@@ -27,7 +33,6 @@ function ItemDetail({ Productos }) {
                 <div className='counter'>
                         <ItemCount stock={5} initial={1} onAdd={onAdd}/>
                 </div>
-                <Link to='/cart'>Finalizar compra</Link>
             </div>
         </div>
 	);
