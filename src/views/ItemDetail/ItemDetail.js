@@ -14,6 +14,7 @@ function ItemDetail({ Productos }) {
             icon: 'success',
             text: '¡Has agregado este producto a tu carrito!',
             showConfirmButton: false,
+            timer: 3500,
         })
     }
 
